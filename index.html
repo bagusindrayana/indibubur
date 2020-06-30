@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800" rel="stylesheet">
+    
+</head>
+<body>
+    <style>
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow: hidden;
+            background-image: url('./shape.png');
+            background-position-y: 50vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-position: bottom; */
+        }
+
+        .shake {
+            animation: shake 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        .muncul-2-detik {
+            animation: muncul-2-detik 4s;
+        }
+
+        @keyframes muncul-2-detik {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes muncul-telepon-mas-agus {
+            0% { transform: translate(800px, 0px); }
+            70% { transform: translate(800px, 0px); }
+            100% { transform: translate(0px, 0px); }
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding: 0;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .middle {
+            margin: auto;
+        }
+
+       
+        .flex-container {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .row {
+            width: auto;
+            border: 1px solid blue;
+        }
+        .flex-item {
+            padding: 5px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .indihome {
+            font-size: 40px;
+            font-weight: bold;
+            display: block;
+            line-height: 1;
+        }
+
+        .paket-phoenix {
+            font-size: 40px;
+            font-weight: bold;
+            color: red;
+            display: block;
+            line-height: 1;
+        }
+
+        .telkom-logo {
+            width: 100px;
+        }
+
+        .indihome-fiber-logo {
+            width: 150px;
+        }
+
+        .daftar-paket {
+            text-align: left;
+ 
+        }
+
+      
+
+        .daftar-paket span {
+            display: block;
+        }
+
+        .nama-paket {
+            color: red;
+            font-size: 20px !important;
+            font-weight: bold;
+        }
+
+        .kecepatan {
+            color: black;
+            font-size: 15px !important;
+            font-weight: bold;
+        }
+
+        .paket {
+            width: 60%;
+            float: left;
+        }
+
+        .mas-agus {
+            width: 40%;
+            float:right;
+            text-align: right;
+            bottom: 0;
+        }
+
+        .daftar-harga {
+    
+            text-align: right;
+        }
+
+        .moto {
+            display: block;
+        }
+
+      
+
+        .harga {
+            font-size: 25px;
+            color: red;
+        }
+
+        .harga small {
+            font-size: 15px;
+        }
+
+        .harga .month {
+            font-size: 10px;
+            display: block;
+            color: black;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+
+        table tr td {
+            padding: 5px 0px;
+        }
+
+        .mas-agus img {
+            animation: mas-agus 2s;
+            width: 300px;
+            
+        }
+
+        @keyframes mas-agus {
+            0% {
+                transform: translate(300px, 0px);
+                opacity: 0;
+
+             }
+            100% { transform: translate(0px, 0px);opacity: 1; }
+        }
+
+        #skb {
+            font-weight: bold;
+        }
+
+        table tr {
+            animation: muncul-2-detik 4s;
+        }
+
+        .nomor-telepon {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 30%;
+            padding: 10px;
+            background-color: orange;
+            z-index: 99;
+            text-align: left;
+            font-weight: bold;
+            transform: translate(0px, 0px);
+            animation: muncul-telepon-mas-agus 6s;
+            border-radius: 10px;
+        }
+
+
+       
+
+
+
+    </style>
+
+    <div class="flex-container">
+        <div class="flex-item">
+            <img src="./telkom.png" class="telkom-logo">
+        </div>
+        <div class="flex-item align-left">
+            <span class="indihome">IndiHome</span>
+            <span class="paket-phoenix">Paket Phoenix</span>
+            <span class="moto">
+                <b>Tetap dekat</b> dengan <b>telepon jernih</b><br>
+                dan <b>internet cepat</b>
+            </span>
+        </div>
+        <div class="flex-item">
+            <img src="./indihome-fiber.png" class="indihome-fiber-logo">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="paket ">
+            <table class="shake" style="width: 100%;">
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Phoenix</span>
+                        <span class="kecepatan">10 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>280.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Phoenix</span>
+                        <span class="kecepatan">20 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>345.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Phoenix</span>
+                        <span class="kecepatan">50 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>575.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Phoenix</span>
+                        <span class="kecepatan">100 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>935.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>            
+            </table>
+
+            <div style="margin: 50px;">
+                <span id="skb"></span>
+            </div>
+
+            
+            
+        </div>
+        <div class="mas-agus">
+            <span class="nomor-telepon">Mas Agus - 081515296407 / 082328572788</span>
+            <img src="./mas-agus.png" alt="mas agus">
+            
+        </div>
+
+        <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+        <audio controls id="player" autoplay loop>
+            <source src="audio.mp3" type="audio/mp3">
+        </audio>
+
+        
+    </div>
+
+    <script>
+        var i = 0;
+        var txt = '*Syarat & Ketentuan Berlaku';
+        var speed = 100;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("skb").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        setTimeout(() => {
+            typeWriter();
+        }, 2000);
+        
+    </script>
+</body>
+</html>
