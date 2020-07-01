@@ -3,278 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mas Agus - IndiHome</title>
+    <meta name="description" content="Iklan IndiHome yang dibawakan mas agus dan mas pras">
+    <meta name="keywords" content="Iklan IndiHome, mas agus, mas pras,IndiHome">
+    <meta name="author" content="bagus indrayana">
+    <title>Mas Agus & Mas Pras - IndiHome</title>
+    
+
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800" rel="stylesheet">
+    
     
 </head>
 <body>
-    <style>
-        html {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+    <div class="flex-container" >
+        <div class="flex-item">
+            <img src="./assets/images/telkom.png" class="telkom-logo">
+        </div>
+        <div class="flex-item align-left" >
+            <div id="bagian-mas-agus">
+                <span class="indihome">IndiHome</span>
+                <span class="paket-phoenix">Paket Phoenix</span>
+                <span class="moto">
+                    <b>Tetap dekat</b> dengan <b>telepon jernih</b><br>
+                    dan <b>internet cepat</b>
+                </span>
+            </div>
 
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            overflow: hidden;
-            background-image: url('./shape.png');
-            background-position-y: 50vh;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            /* background-position: bottom; */
-        }
-
-        .shake {
-            animation: shake 1.5s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-2px, -3px) rotate(-1deg); }
-            20% { transform: translate(-4px, 1px) rotate(1deg); }
-            30% { transform: translate(4px, 3px) rotate(0deg); }
-            40% { transform: translate(2px, -2px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-4px, 2px) rotate(0deg); }
-            70% { transform: translate(4px, 2px) rotate(-1deg); }
-            80% { transform: translate(-2px, -2px) rotate(1deg); }
-            90% { transform: translate(2px, 3px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
-
-        .muncul-2-detik {
-            animation: muncul-2-detik 4s;
-        }
-
-        @keyframes muncul-2-detik {
-            0% { opacity: 0; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes muncul-telepon-mas-agus {
-            0% { transform: translate(800px, 0px); }
-            70% { transform: translate(800px, 0px); }
-            100% { transform: translate(0px, 0px); }
-        }
-
-        .wrapper {
-            width: 80%;
-            margin: auto;
-            padding: 0;
-        }
-
-        .left {
-            float: left;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .header {
-            width: 100%;
-        }
-
-        .middle {
-            margin: auto;
-        }
-
-       
-        .flex-container {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .row {
-            width: auto;
-            border: 1px solid blue;
-        }
-        .flex-item {
-            padding: 5px;
-            margin: auto;
-
-            text-align: center;
-        }
-
-        .align-left {
-            text-align: left;
-        }
-
-        .indihome {
-            font-size: 40px;
-            font-weight: bold;
-            display: block;
-            line-height: 1;
-        }
-
-        .paket-phoenix {
-            font-size: 40px;
-            font-weight: bold;
-            color: red;
-            display: block;
-            line-height: 1;
-        }
-
-        .telkom-logo {
-            width: 100px;
-        }
-
-        .indihome-fiber-logo {
-            width: 150px;
-        }
-
-        .daftar-paket {
-            text-align: left;
- 
-        }
-
-      
-
-        .daftar-paket span {
-            display: block;
-        }
-
-        .nama-paket {
-            color: red;
-            font-size: 20px !important;
-            font-weight: bold;
-        }
-
-        .kecepatan {
-            color: black;
-            font-size: 15px !important;
-            font-weight: bold;
-        }
-
-        .paket {
-            width: 60%;
-            float: left;
-        }
-
-        .mas-agus {
-            width: 40%;
-            float:right;
-            text-align: right;
-            bottom: 0;
-        }
-
-        .daftar-harga {
-    
-            text-align: right;
-        }
-
-        .moto {
-            display: block;
-        }
-
-      
-
-        .harga {
-            font-size: 25px;
-            color: red;
-        }
-
-        .harga small {
-            font-size: 15px;
-        }
-
-        .harga .month {
-            font-size: 10px;
-            display: block;
-            color: black;
-        }
-
-        table {
-            margin-top: 20px;
-        }
-
-        table tr td {
-            padding: 5px 0px;
-        }
-
-        .mas-agus img {
-            animation: mas-agus 2s;
-            width: 300px;
+            <div id="bagian-mas-pras" class="hide">
+                <span class="indihome">IndiHome</span>
+                <span class="paket-phoenix">Paket Streamix</span>
+                <span class="moto">
+                    <b>Nikmati keseruan</b> bersama keluarga <br> dengan <b>internet cepat</b> dan <br> <b>tayangan TV populer</b>
+                </span>
+            </div>
             
-        }
-
-        @keyframes mas-agus {
-            0% {
-                transform: translate(300px, 0px);
-                opacity: 0;
-
-             }
-            100% { transform: translate(0px, 0px);opacity: 1; }
-        }
-
-        #skb {
-            font-weight: bold;
-        }
-
-        table tr {
-            animation: muncul-2-detik 4s;
-        }
-
-        .nomor-telepon {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            width: 30%;
-            padding: 10px;
-            background-color: orange;
-            z-index: 99;
-            text-align: left;
-            font-weight: bold;
-            transform: translate(0px, 0px);
-            animation: muncul-telepon-mas-agus 6s;
-            border-radius: 10px;
-        }
-        .hide {
-            visibility: hidden;
-            display:none;
-        }
-
-        .show {
-            visibility: visible;
-            display:block;
-        }
-
-
-       
-
-
-
-    </style>
-
-    <div class="flex-container">
-        <div class="flex-item">
-            <img src="./telkom.png" class="telkom-logo">
-        </div>
-        <div class="flex-item align-left">
-            <span class="indihome">IndiHome</span>
-            <span class="paket-phoenix">Paket Phoenix</span>
-            <span class="moto">
-                <b>Tetap dekat</b> dengan <b>telepon jernih</b><br>
-                dan <b>internet cepat</b>
-            </span>
         </div>
         <div class="flex-item">
-            <img src="./indihome-fiber.png" class="indihome-fiber-logo">
+            <img src="./assets/images/indihome-fiber.png" class="indihome-fiber-logo">
         </div>
     </div>
+
+    <div id="bg-shape"></div>
+
     <div class="wrapper">
-        <div class="paket ">
+        <div class="paket" id="paket-mas-agus">
             <table class="shake" style="width: 100%;">
                 <tr>
                     <td class="daftar-paket">
@@ -336,87 +108,87 @@
             <div style="margin: 50px;">
                 <span id="skb"></span>
             </div>
-
-            
-            
         </div>
-        <div class="mas-agus">
+        <div class="mas-agus" id="mas-agus">
             <span class="nomor-telepon">Mas Agus - 081515XXXXXX / 082328XXXXXX</span>
-            <img src="./mas-agus.png" alt="mas agus">
-            
+            <img src="./assets/images/mas-agus.png" alt="mas agus">
         </div>
-
-        <!-- <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
-        <audio controls id="player" class="hide" autoplay loop>
-            <source src="audio.mp3" type="audio/mp3">
-        </audio>
 
         
+        <div class="mas-pras hide" id="mas-pras">
+            <span class="nomor-telepon">Mas Pras - 081515XXXXXX / 082328XXXXXX</span>
+            <img src="./assets/images/mas-pras.png" alt="mas pras">
+        </div>
+        <div class="paket hide right" id="paket-mas-pras">
+            <table class="shake" style="width: 100%;">
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Streamix</span>
+                        <span class="kecepatan">10 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>320.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Streamix</span>
+                        <span class="kecepatan">20 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>385.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Streamix</span>
+                        <span class="kecepatan">50 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>615.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="daftar-paket">
+                        <span>IndiHome</span>
+                        <span class="nama-paket">Paket Streamix</span>
+                        <span class="kecepatan">100 Mbps</span>
+                    </td>
+                    <td class="daftar-harga">
+                        <span class="harga">
+                            <small>Rp.</small>975.000
+                            <span class="month">/Bulan</span>
+                        </span>
+                    </td>
+                </tr>            
+            </table>
+
+            <div style="margin: 50px;">
+                <span id="skb-pras"></span>
+            </div>
+        </div>
+        
+
+        <audio controls id="player" class="hide" autoplay loop>
+            <source src="./assets/audio.mp3" type="audio/mp3">
+        </audio>  
     </div>
 
-    <script>
-        var i = 0;
-        var txt = '*Syarat & Ketentuan Berlaku';
-        var speed = 100;
-
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("skb").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-
-        setTimeout(() => {
-            typeWriter();
-        }, 2000);
-
-    isAutoplaySupported = function(callback) {
-      if (typeof callback !== 'function') {
-        console.log('isAutoplaySupported: Callback must be a function!');
-        return false;
-      }
-      if (!sessionStorage.autoplaySupported) {
-        var audio = document.getElementById("player");
-        audio.autoplay = true;
-        audio.src = './audio.mp3';
-        audio.load();
-        audio.style.display = 'none';
-        audio.playing = false;
-        audio.play();
-
-        audio.onplay = function() {
-          this.playing = true;
-        };
-        audio.oncanplay = function() {
-          if (audio.playing) {
-            sessionStorage.autoplaySupported = 'true';
-            callback(true);
-          } else {
-            sessionStorage.autoplaySupported = 'false';
-            callback(false);
-          }
-        };
-      } else {
-        if (sessionStorage.autoplaySupported === 'true') {
-          callback(true);
-        } else {
-          callback(false);
-        }
-      }
-    }
-
-    isAutoplaySupported(function(supported) {
-      if (supported) {
-        console.log('HTML5 Audio Autoplay Supported!');
-      } else {
-        alert("Ops browsermu gk ijinin autoplay jadi silahkan play manual musiknya")
-        document.getElementById("player").classList.remove("hide");
-        document.getElementById("player").classList.add("show");
-        console.log('HTML5 Audio Autoplay Not Supported :(');
-      }
-    });
-        
-    </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

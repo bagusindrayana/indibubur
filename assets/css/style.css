@@ -1,0 +1,399 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.shake {
+    animation: shake 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-1deg); }
+    20% { transform: translate(-4px, 1px) rotate(1deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 2px) rotate(-1deg); }
+    80% { transform: translate(-2px, -2px) rotate(1deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.muncul-2-detik {
+    animation: muncul-2-detik 4s;
+}
+
+@keyframes muncul-2-detik {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes muncul-telepon-mas-agus {
+    0% { transform: translate(800px, 0px); }
+    70% { transform: translate(800px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    z-index: 99;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.header {
+    width: 100%;
+}
+
+.middle {
+    margin: auto;
+}
+
+
+.flex-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: auto;
+    border: 1px solid blue;
+}
+.flex-item {
+    padding: 5px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.indihome {
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.paket-phoenix {
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    display: block;
+    line-height: 1;
+}
+
+.telkom-logo {
+    width: 100px;
+}
+
+.indihome-fiber-logo {
+    width: 150px;
+}
+
+.daftar-paket {
+    text-align: left;
+
+}
+
+
+
+.daftar-paket span {
+    display: block;
+}
+
+.nama-paket {
+    color: red;
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+.kecepatan {
+    color: black;
+    font-size: 15px !important;
+    font-weight: bold;
+}
+
+.paket {
+    width: 60%;
+    float: left;
+}
+
+.right {
+    float: right !important;
+}
+
+.mas-agus {
+    width: 40%;
+    float:right;
+    text-align: right;
+    bottom: 0;
+}
+
+.daftar-harga {
+
+    text-align: right;
+}
+
+.moto {
+    display: block;
+}
+
+
+
+.harga {
+    font-size: 25px;
+    color: red;
+}
+
+.harga small {
+    font-size: 15px;
+}
+
+.harga .month {
+    font-size: 10px;
+    display: block;
+    color: black;
+}
+
+table {
+    margin-top: 20px;
+}
+
+table tr td {
+    padding: 5px 0px;
+}
+
+.mas-agus img {
+    animation: mas-agus 2s;
+    width: 300px;
+    
+}
+
+@keyframes mas-agus {
+    0% {
+        transform: translate(300px, 0px);
+        opacity: 0;
+
+     }
+    100% { transform: translate(0px, 0px);opacity: 1; }
+}
+
+#skb {
+    font-weight: bold;
+}
+
+#skb-pras {
+    font-weight: bold;
+}
+
+table tr {
+    animation: muncul-2-detik 4s;
+}
+
+.nomor-telepon {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 30%;
+    padding: 10px;
+    background-color: orange;
+    z-index: 99;
+    text-align: left;
+    font-weight: bold;
+    transform: translate(0px, 0px);
+    animation: muncul-telepon-mas-agus 6s ;
+    border-radius: 10px;
+}
+.hide {
+    visibility: hidden !important;
+    display:none !important;
+}
+
+.show {
+    visibility: visible !important;
+    display:block !important;
+}
+
+.mas-agus.transition-mas-agus {
+    display: none;
+}
+
+.transition-mas-agus {
+    display: none;
+    animation: transition-mas-agus 1s forwards;
+}
+
+@keyframes transition-mas-agus {
+    0% {
+        display: block;
+        transform: translate(0px, 0px);
+        opacity: 1;
+
+     }
+    100% { transform: translate(300px, 0px);opacity: 0;display: none; }
+}
+
+.transition-paket-mas-agus {
+    display: none;
+    animation: transition-paket-mas-agus 1s forwards;
+}
+
+.paket.transition-paket-mas-agus {
+    display: none;
+}
+
+@keyframes transition-paket-mas-agus {
+    0% {
+        display: block;
+        transform: translate(0px, 0px);
+        opacity: 1;
+
+     }
+    100% { transform: translate(-300px, 0px);opacity: 0;display: none; }
+}
+
+
+#bg-shape {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-image: url('../images/shape.png');
+    background-position-y: 50vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.shape-transition {
+   
+    animation: shape-transition 2s forwards;
+
+}
+
+@keyframes shape-transition {
+    0% {
+        
+        opacity: 1;
+
+     }
+     40% {
+        opacity: 0;
+        transform:scaleX(1);
+     }
+
+     50% {
+         
+         transform:scaleX(-1);
+     }
+    100% { opacity: 1;transform:scaleX(-1); }
+}
+
+.mas-pras {
+    width: 40%;
+    float: left;
+    text-align: left;
+    bottom: 0;
+}
+
+.transition-mas-prass {
+    animation: transition-mas-prass 1s forwards;
+}
+
+@keyframes transition-mas-prass {
+    0% {
+        transform: translate(-300px, 0px);
+        opacity: 0;
+
+     }
+    100% { transform: translate(0px, 0px);opacity: 1; }
+}
+
+.transition-paket-mas-pras {
+    animation: transition-paket-mas-prass 1s forwards;
+}
+
+@keyframes transition-paket-mas-prass {
+    0% {
+        transform: translate(300px, 0px);
+        opacity: 0;
+
+     }
+    100% { transform: translate(0px, 0px);opacity: 1; }
+}
+
+.mas-pras .nomor-telepon {
+    position: absolute;
+    bottom: 120px;
+    left: 30px !important;
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    z-index: 99;
+    text-align: right;
+    font-weight: bold;
+    transform: translate(0px, 0px);
+    animation: muncul-telepon-mas-pras 6s ;
+    border-radius: 10px;
+}
+
+@keyframes muncul-telepon-mas-pras {
+    0% { transform: translate(-800px, 0px); }
+    70% { transform: translate(-800px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+
+
+.bagian-mas-agus-transition {
+    animation: bagian-mas-agus-transition 1s forwards;
+    display: none;
+}
+
+#bagian-mas-agus.bagian-mas-agus-transition {
+    display: none;
+}
+
+@keyframes bagian-mas-agus-transition {
+    0% { transform: translate(0, 0px);display: block; }
+    100% { transform: translate(800px, 0px);display: none; }
+}
+
+.bagian-mas-pras-transition {
+    animation: bagian-mas-pras-transition 2s;
+    transform: translate(0px, 0px);
+}
+
+@keyframes bagian-mas-pras-transition {
+    
+    0% { transform: translate(-400px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
