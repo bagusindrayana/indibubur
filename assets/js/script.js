@@ -25,7 +25,7 @@ isAutoplaySupported = function(callback) {
     if (!sessionStorage.autoplaySupported) {
         var audio = document.getElementById("player");
         audio.autoplay = true;
-        audio.src = './audio.mp3';
+        audio.src = window.location.origin+"/assets/audio.mp3";
         audio.load();
         audio.style.display = 'none';
         audio.playing = false;
