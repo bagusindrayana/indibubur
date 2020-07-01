@@ -375,7 +375,7 @@
         return false;
       }
       if (!sessionStorage.autoplaySupported) {
-        var audio = document.createElement('audio');
+        var audio = document.getElementById("player");
         audio.autoplay = true;
         audio.src = './audio.mp3';
         audio.load();
