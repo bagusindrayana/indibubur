@@ -240,9 +240,12 @@
             animation: muncul-telepon-mas-agus 6s;
             border-radius: 10px;
         }
+        .hide {
+            visibility: hidden;
+        }
 
         .show {
-            display: block;
+            visibility: visible;
         }
 
 
@@ -341,8 +344,8 @@
             
         </div>
 
-        <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-        <audio controls id="player" autoplay loop>
+        <!-- <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
+        <audio controls id="player" class="hide" autoplay loop>
             <source src="audio.mp3" type="audio/mp3">
         </audio>
 
@@ -365,6 +368,52 @@
         setTimeout(() => {
             typeWriter();
         }, 2000);
+
+    isAutoplaySupported = function(callback) {
+      if (typeof callback !== 'function') {
+        console.log('isAutoplaySupported: Callback must be a function!');
+        return false;
+      }
+      if (!sessionStorage.autoplaySupported) {
+        var audio = document.createElement('audio');
+        audio.autoplay = true;
+        audio.src = './audio.mp3';
+        audio.load();
+        audio.style.display = 'none';
+        audio.playing = false;
+        audio.play();
+
+        audio.onplay = function() {
+          this.playing = true;
+        };
+        audio.oncanplay = function() {
+          if (audio.playing) {
+            sessionStorage.autoplaySupported = 'true';
+            callback(true);
+          } else {
+            sessionStorage.autoplaySupported = 'false';
+            callback(false);
+          }
+        };
+      } else {
+        if (sessionStorage.autoplaySupported === 'true') {
+          callback(true);
+        } else {
+          callback(false);
+        }
+      }
+    }
+
+    isAutoplaySupported(function(supported) {
+      if (supported) {
+        console.log('HTML5 Audio Autoplay Supported!');
+      } else {
+        alert("Ops browsermu gk ijinin autoplay jadi silahkan play manual musiknya")
+        document.getElementById("player").classList.remove("hide");
+        document.getElementById("player").classList.add("show");
+        console.log('HTML5 Audio Autoplay Not Supported :(');
+      }
+    });
         
     </script>
 </body>
