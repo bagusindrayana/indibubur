@@ -238,6 +238,7 @@ table tr {
     transform: translate(0px, 0px);
     animation: muncul-telepon-mas-agus 6s ;
     border-radius: 10px;
+    font-size: 12px;
 }
 
 #player {
@@ -387,6 +388,7 @@ table tr {
     transform: translate(0px, 0px);
     animation: muncul-telepon-mas-pras 6s ;
     border-radius: 10px;
+    font-size: 12px;
 }
 
 @keyframes muncul-telepon-mas-pras {
@@ -477,6 +479,22 @@ table tr {
         color: black;
         font-size: 15px !important;
         font-weight: bold;
+    }
+
+    .mas-agus .nomor-telepon {
+        position: absolute;
+        bottom: 20px;
+   
+    
+    }
+
+    .mas-pras .nomor-telepon {
+        position: absolute;
+        bottom: 20px;
+        left: 20px !important;
+        width: 100%;
+        padding: 5px;
+    
     }
 }
 
