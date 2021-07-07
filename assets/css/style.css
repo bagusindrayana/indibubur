@@ -152,10 +152,13 @@ body {
 }
 
 .mas-agus {
-    width: 40%;
-    float:right;
+    width: 20%;
+    /* float:right; */
+    display: inline-block;
     text-align: right;
     bottom: 0;
+    right: 0;
+    position:fixed;
 }
 
 .daftar-harga {
@@ -194,7 +197,8 @@ table tr td {
 
 .mas-agus img {
     animation: mas-agus 2s;
-    width: 300px;
+    width: 100%;
+    /* width: 300px; */
     
 }
 
@@ -223,7 +227,7 @@ table tr {
     position: absolute;
     bottom: 30px;
     right: 30px;
-    width: 30%;
+    width: 100%;
     padding: 10px;
     background-color: orange;
     z-index: 99;
@@ -318,10 +322,17 @@ table tr {
 }
 
 .mas-pras {
-    width: 40%;
-    float: left;
+    width: 20%;
+    /* float: left; */
+    display: inline-block;
     text-align: left;
     bottom: 0;
+    left: 0;
+    position:fixed;
+}
+
+.mas-pras img {
+    width: 100%;
 }
 
 .transition-mas-prass {
