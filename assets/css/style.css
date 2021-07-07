@@ -421,3 +421,131 @@ table tr {
     0% { transform: translate(-400px, 0px); }
     100% { transform: translate(0px, 0px); }
 }
+
+.skb {
+    margin: 50px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .telkom-logo {
+        width: 90px;
+    }
+    
+    .indihome-fiber-logo {
+        width: 120px;
+    }
+
+    .indihome {
+        font-size: 25px;
+        font-weight: bold;
+        display: block;
+        line-height: 1;
+    }
+    
+    .paket-phoenix {
+        font-size: 25px;
+        font-weight: bold;
+        color: red;
+        display: block;
+        line-height: 1;
+    }
+
+    .moto {
+        font-size: 12px;
+    }
+
+    .mas-agus {
+        width: 50%;
+    }
+
+    .mas-pras {
+        width: 50%;
+    }
+
+    .skb {
+        margin: 0;
+    }
+
+    .nama-paket {
+        color: red;
+        font-size:20px !important;
+        font-weight: bold;
+    }
+    
+    .kecepatan {
+        color: black;
+        font-size: 15px !important;
+        font-weight: bold;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .telkom-logo {
+        width: 100px;
+    }
+    
+    .indihome-fiber-logo {
+        width: 150px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .telkom-logo {
+        width: 130px;
+    }
+    
+    .indihome-fiber-logo {
+        width: 180px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .telkom-logo {
+        width: 150px;
+    }
+    
+    .indihome-fiber-logo {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .telkom-logo {
+        width: 200px;
+    }
+    
+    .indihome-fiber-logo {
+        width: 250px;
+    }
+
+    .nama-paket {
+        color: red;
+        font-size:30px !important;
+        font-weight: bold;
+    }
+    
+    .kecepatan {
+        color: black;
+        font-size: 25px !important;
+        font-weight: bold;
+    }
+
+    .indihome {
+        font-size: 45px;
+        font-weight: bold;
+        display: block;
+        line-height: 1;
+    }
+    
+    .paket-phoenix {
+        font-size: 45px;
+        font-weight: bold;
+        color: red;
+        display: block;
+        line-height: 1;
+    }
+}
