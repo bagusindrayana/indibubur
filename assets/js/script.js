@@ -1,4 +1,5 @@
 var i = 0;
+var i2 = 0;
 var txt = '*Syarat & Ketentuan Berlaku';
 var speed = 100;
 var audio = document.getElementById("player");
@@ -6,16 +7,16 @@ var audio = document.getElementById("player");
 function showMain(){
     document.getElementById("loading").style.display = 'none';
     var main = document.getElementsByClassName("flex-container");
-    for (let i = 0; i < main.length; i++) {
-        const e = main[i];
+    for (let x = 0; x < main.length; x++) {
+        const e = main[x];
         e.style.display = 'flex';
 
         
     }
 
     var main2 = document.getElementsByClassName("wrapper");
-    for (let i = 0; i < main2.length; i++) {
-        const e = main2[i];
+    for (let x = 0; x < main2.length; x++) {
+        const e = main2[x];
         e.style.display = 'block';
 
         
@@ -29,6 +30,7 @@ function showMain(){
 audio.onended = function() {
     audio.currentTime = 0;
     audio.play();
+    
     masAgus();
     
 };
@@ -36,13 +38,18 @@ setInterval(function(){
     
     if(audio.currentTime >= 15.5){
         masPrass();
+        if(i2 > txt.length){
+            i2 = 0;
+            document.getElementById("skb-pras").innerHTML = "";
+            setTimeout(typeWriter2, 2000);
+        }
     }
+
+    
  }, 1000);
 
 
-audio.onplay = function() {
-    showMain();
-};
+
 
 function typeWriter() {
     if (i < txt.length) {
@@ -53,17 +60,30 @@ function typeWriter() {
 }
 
 
+function typeWriter2() {
+    if (i2 < txt.length) {
+        document.getElementById("skb-pras").innerHTML += txt.charAt(i2);
+        i2++;
+        setTimeout(typeWriter2, speed);
+    }
+}
 
-setTimeout(() => {
-    typeWriter();
-}, 2000);
+
+audio.onplay = function() {
+    showMain();
+    i = 0;
+    i2 = txt.length+1;
+    document.getElementById("skb").innerHTML = "";
+    setTimeout(typeWriter, 2000);
+};
+
 
 isAutoplaySupported = function(callback) {
     if (typeof callback !== 'function') {
         console.log('isAutoplaySupported: Callback must be a function!');
         return false;
     }
-    if (sessionStorage.autoplaySupported === "false") {
+    if (!sessionStorage.autoplaySupported) {
         
         audio.autoplay = true;
         audio.src = window.location.origin+"/assets/audio.mp3";
@@ -75,6 +95,10 @@ isAutoplaySupported = function(callback) {
         audio.onplay = function() {
             this.playing = true;
             showMain();
+            i = 0;
+            i2 = txt.length+1;
+            document.getElementById("skb").innerHTML = "";
+            setTimeout(typeWriter, 2000);
         };
         audio.oncanplay = function() {
             if (audio.playing) {
@@ -138,18 +162,9 @@ function masAgus(){
 
     document.getElementById("bagian-mas-pras").classList.add("hide");
     document.getElementById("bagian-mas-pras").classList.remove("bagian-mas-pras-transition");
+
+  
 }
 
 
-function typeWriter2() {
-    if (i < txt.length) {
-        document.getElementById("skb-pras").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter2, speed);
-    }
-}
 
-setTimeout(() => {
-    i = 0
-    typeWriter2();
-}, 17500);
