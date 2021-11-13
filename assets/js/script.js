@@ -8,7 +8,7 @@ function showMain(){
     document.getElementById("loading").style.display = 'none';
 
     document.getElementById("bg-shape").style.display = 'block';
-    
+
     var main = document.getElementsByClassName("flex-container");
     for (let x = 0; x < main.length; x++) {
         const e = main[x];
@@ -125,10 +125,11 @@ isAutoplaySupported(function(supported) {
     if (supported) {
         console.log('HTML5 Audio Autoplay Supported!');
     } else {
-        alert("Ops browsermu enggak ijinin autoplay jadi silahkan play manual musiknya")
         document.getElementById("player").classList.remove("hide");
         document.getElementById("player").classList.add("show");
         console.log('HTML5 Audio Autoplay Not Supported :(');
+        alert("Ops browsermu enggak ijinin autoplay jadi silahkan play manual musiknya")
+        
     }
 });
 
