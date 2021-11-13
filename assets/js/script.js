@@ -130,6 +130,8 @@ isAutoplaySupported(function(supported) {
         audio.load();
         audio.style.display = 'none';
         audio.playing = false;
+        document.getElementById("player").classList.remove("hide");
+        document.getElementById("player").classList.add("show");
         audio.play();
         audio.oncanplay = function() {
             document.getElementById("player").classList.remove("show");

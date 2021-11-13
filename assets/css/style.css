@@ -387,7 +387,7 @@ table tr {
     width: 100%;
     padding: 10px;
     background-color: orange;
-    z-index: 99;
+    z-index: 999;
     text-align: right;
     font-weight: bold;
     transform: translate(0px, 0px);
