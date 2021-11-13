@@ -124,9 +124,10 @@ isAutoplaySupported = function(callback) {
 isAutoplaySupported(function(supported) {
     if (supported) {
         console.log('HTML5 Audio Autoplay Supported!');
+        document.getElementById("player").classList.remove("show");
+        document.getElementById("player").classList.add("hide");
     } else {
-        document.getElementById("player").classList.remove("hide");
-        document.getElementById("player").classList.add("show");
+        
         console.log('HTML5 Audio Autoplay Not Supported :(');
         alert("Ops browsermu enggak ijinin autoplay jadi silahkan play manual musiknya")
         
