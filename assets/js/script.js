@@ -6,6 +6,9 @@ var audio = document.getElementById("player");
 
 function showMain(){
     document.getElementById("loading").style.display = 'none';
+
+    document.getElementById("bg-shape").style.display = 'block';
+    
     var main = document.getElementsByClassName("flex-container");
     for (let x = 0; x < main.length; x++) {
         const e = main[x];
