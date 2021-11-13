@@ -15,6 +15,7 @@
     
 </head>
 <body>
+    <p id="currentTime "></p>
     <div class="flex-container" >
         <div class="flex-item">
             <img src="./assets/images/telkom.png" class="telkom-logo">
@@ -184,11 +185,17 @@
         </div>
         
 
-        <audio controls id="player" class="hide" autoplay loop>
-            <source src="./assets/audio.mp3" type="audio/mp3">
-        </audio>  
+        
     </div>
 
-    <script src="./assets/js/script.js"></script>
+    <div id="loading">
+        <!-- Loading... -->
+    </div>
+
+    <audio controls id="player" class="hide" >
+        <source src="./assets/audio.mp3" type="audio/mp3">
+    </audio> 
+
+    <script src="./assets/js/script.js?v=2"></script>
 </body>
 </html>

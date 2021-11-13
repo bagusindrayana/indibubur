@@ -9,6 +9,19 @@ body {
     overflow: hidden;
 }
 
+.main {
+    display: none;
+}
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: block;
+    padding-top: 48hv;
+    position: absolute;
+}
+
 .shake {
     animation: shake 1.5s;
     animation-iteration-count: infinite;
@@ -45,6 +58,7 @@ body {
 }
 
 .wrapper {
+    display: none;
     width: 80%;
     margin: auto;
     padding: 0;
@@ -242,6 +256,7 @@ table tr {
 }
 
 #player {
+    width: 50%;
     position: fixed;
     margin:auto;
     bottom: 0;
@@ -495,6 +510,10 @@ table tr {
         width: 100%;
         padding: 5px;
     
+    }
+
+    #player {
+        width: 100%;
     }
 }
 
