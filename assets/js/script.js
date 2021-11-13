@@ -5,7 +5,7 @@ var speed = 100;
 var audio = document.getElementById("player");
 
 function showMain(){
-    document.getElementById("loading").style.display = 'none';
+ 
 
     document.getElementById("bg-shape").style.display = 'block';
 

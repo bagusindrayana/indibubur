@@ -13,14 +13,7 @@ body {
     display: none;
 }
 
-#loading {
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    display: block;
-    padding-top: 48hv;
-    position: absolute;
-}
+
 
 .shake {
     animation: shake 1.5s;
