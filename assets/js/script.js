@@ -124,8 +124,17 @@ isAutoplaySupported = function(callback) {
 isAutoplaySupported(function(supported) {
     if (supported) {
         console.log('HTML5 Audio Autoplay Supported!');
-        document.getElementById("player").classList.remove("show");
-        document.getElementById("player").classList.add("hide");
+        
+        audio.autoplay = true;
+        audio.src = window.location.origin+"/assets/audio.mp3";
+        audio.load();
+        audio.style.display = 'none';
+        audio.playing = false;
+        audio.play();
+        audio.oncanplay = function() {
+            document.getElementById("player").classList.remove("show");
+            document.getElementById("player").classList.add("hide");
+        };
     } else {
         
         console.log('HTML5 Audio Autoplay Not Supported :(');
